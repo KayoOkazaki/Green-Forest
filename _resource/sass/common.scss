@@ -1,9 +1,10 @@
 @charset "UTF-8";
 @import "variables"; //定数外部ファイル
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Merienda+One|Norican|Pacifico');
+
 // /****************************************************
 // /*  CSSリセット
 // *****************************************************/
-@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Merienda+One|Norican|Pacifico');
 html,body{
   height: 100%;
   margin: 0;
@@ -250,6 +251,10 @@ footer{
     background-color: $footer_color;
     color:#fff;
 }
+footer #foot {
+  margin-top:10px;
+  p {margin:0;}
+}
 #sns {
   width:50%;
 }
@@ -262,7 +267,7 @@ footer{
     line-height: 50px;
             line-height: 30px;
     vertical-align: middle;
-    background: #eaeef1;
+    background:#FFEB9E;
     text-decoration: none;
     margin: 16px;
           margin: 10px;
@@ -292,7 +297,7 @@ footer{
 .flat_ss .btnttl{
     display: inline-block;
     width: 120px;
-        width: 85px;
+        width: 82px;
         font-size: 18px;
     text-align: center;
     vertical-align:middle;

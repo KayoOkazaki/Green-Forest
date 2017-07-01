@@ -268,6 +268,14 @@ footer {
   color: #fff;
 }
 
+footer #foot {
+  margin-top: 10px;
+}
+
+footer #foot p {
+  margin: 0;
+}
+
 #sns {
   width: 50%;
 }
@@ -281,7 +289,7 @@ footer {
   line-height: 50px;
   line-height: 30px;
   vertical-align: middle;
-  background: #eaeef1;
+  background: #FFEB9E;
   text-decoration: none;
   margin: 16px;
   margin: 10px;
@@ -315,7 +323,7 @@ footer {
 .flat_ss .btnttl {
   display: inline-block;
   width: 120px;
-  width: 85px;
+  width: 82px;
   font-size: 18px;
   text-align: center;
   vertical-align: middle;
