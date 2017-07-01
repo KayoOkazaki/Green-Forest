@@ -3,13 +3,13 @@
 /*********************/
 /* News 一覧 */
 /*********************/
-#news {
+#top #news {
   width:50%;
   margin-left: auto;
   margin-right: auto;
   font-weight: 700;
 }
-#news ul li{
+#top #news ul li{
   margin-top: 20px;
   padding: 0 10px 10px 160px;
   border-bottom: 1px dotted $tableHead_color;
@@ -35,14 +35,14 @@
 /*********************/
 /* お悩み一覧  */
 /*********************/
-#problem {
+#trouble {
   width: 80%;
 /*  margin-left: auto;
   margin-right: auto;*/
   margin: 0 auto;
 }
-.problem-wrap {display:table; }
-.problem-wrap ul {  display:table-cell;}
+.trouble-wrap {display:table; }
+.trouble-wrap ul {  display:table-cell;}
 
 .list-mv05.mv05 {
    /*margin:40px 10px;*/

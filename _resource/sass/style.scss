@@ -17,7 +17,7 @@
     display: flex;
 }
 #aboutus .wrapper img{
-    width:150px;
+    width:170px;
 }
 #case{
     text-indent: 30px;
@@ -43,6 +43,10 @@
 }
 #price table th {
   background-color:$accent_color1;
+    background-color:#b7ffb7;
+}
+#price table td {
+  background-color:#fff;
 }
 /****************************/
 /* よくある質問 */
@@ -54,6 +58,7 @@
 }
 #QandA-1 dt {
   background: #B0FFA9; /* 「Q」タイトルの背景色 */
+    background: #b7ffb7;
   font-weight:bold;
   // color: orange; /* 「Q」タイトルの文字色 */
   padding: 8px;
@@ -76,4 +81,63 @@
 }
 #QandA-1 .strong {
   font-weight:bold;
+}
+/****************************/
+/* trouble トラブルの原因 */
+/***************************/
+#trouble {
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#trouble article{
+    margin-top: 20px;
+}
+.wrapper {
+    display: flex;
+}
+#trouble .wrapper img{
+    width:170px;
+}
+/****************************/
+/* blog ブログ */
+/***************************/
+#blog {
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#blog article{
+    margin-top: 20px;
+}
+.wrapper {
+    display: flex;
+}
+#blog .wrapper img{
+    width:170px;
+}
+/****************************/
+/* News 新着情報 */
+/***************************/
+#body_news #news {
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#body_news #news article{
+    margin-top: 20px;
+}
+.wrapper {
+    display: flex;
+}
+#body_news #news .wrapper img{
+    width:170px;
+}
+#body_news #news .date {
+  width:20%;
+  background: #cccccc; /* 背景色 */
+  font-weight:bold;
+  // color: #fff; /* 文字色 */
+  padding: 0 10px;
+  border-radius: 25px;
 }
