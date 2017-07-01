@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+/*********************/
+/* News 一覧 */
+/*********************/
+#news {
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+}
+#news ul li{
+  margin-top: 20px;
+  padding: 0 10px 10px 160px;
+  border-bottom: 1px dotted #552707;
+  text-indent: -160px;
+  list-style-type: none;
+}
+.news-title a{
+    color:black;
+    text-decoration: none;
+}
+.news-title a:hover{
+  color: #43ba38;
+  transition: 0.6s;
+  text-decoration: none;
+}
+
+.news-date {
+    margin-right:10px;
+}
+.news-title {
+}
+
+/*********************/
+/* お悩み一覧  */
+/*********************/
+#problem {
+  width: 80%;
+/*  margin-left: auto;
+  margin-right: auto;*/
+  margin: 0 auto;
+}
+.problem-wrap {display:table; }
+.problem-wrap ul {  display:table-cell;}
+
+.list-mv05.mv05 {
+   /*margin:40px 10px;*/
+}
+
+/*.list-mv05 {display:inline-block; }*/
+
+/*画像中文字デザイン*/
+.list {
+/*    margin:5px;
+    padding:5px;
+*/
+       /*width:320px; height:180px;*/
+
+}
+.list li{
+    /*margin: 50px 20px 50px 20px;*/
+    /*float: left;*/
+    transition: .8s;
+}
+.list span{
+ position: absolute;
+ top: 30px;
+ left: 45px;
+ width: 145px;
+ color:#552707;
+ font-size:18px;
+ font-weight: bold;
+ text-shadow: 1px 2px 3px #808080;
+}
+
+
+/*ホバー時のキャプションエフェクト*/
+.cap {position: relative; width:50%;}
+.cap h3 {
+    color:white;
+    font-size: 20px;
+}
+.cap p {
+    color:white;
+    font-size:12px;
+}
+.cap figure {
+    position: relative;
+    overflow: hidden;
+    width: 320px; height:180px;
+    /*width: 100%; height: 100%;*/
+    border-radius: 10px;
+
+}
+.cap figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%; height: 100%;
+    /*width: 320px; height:180px;*/
+    background: rgba(0,0,0,.6);
+    -webkit-transition: .3s;
+    transition: .3s;
+    opacity: 0;
+}
+.cap figcaption h3,
+.cap figcaption p {
+    position: absolute;
+    left: -100%;
+    width: 260px;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.cap figcaption h3 {
+    top: 30px;
+}
+.cap figcaption p {
+    top: 75px;
+}
+.cap figure:hover figcaption {
+    opacity: 1;
+}
+.cap figure:hover figcaption h3,
+.cap figure:hover figcaption p {
+    left: 20px;
+}
+.cap figure:hover figcaption h3 {
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s;
+}
+.cap figure:hover figcaption p {
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s;
+}
+/*********************/
+/* お客様の声  */
+/*********************/
+#voice {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#voice h3 {font-size:15px;font-weight: bold;}
+.voice-wrap {display:table; }
+.voice-in {  display:table-cell;}
+.voice-in img{
+   width:40%;
+  margin-left: auto;
+  margin-right: auto;
+  /*border-radius: 50%;*/
+}
+.voice-in figure {
+    margin:0; padding: 0;
+}
+.voice-in figcaption {
+   word-wrap:break-all;
+   width:80%;
+}
+
+/*********************/
+/* アクセス・店舗ご案内  */
+/*********************/
+#shop {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#info table {
+    /*margin-top:20px;*/
+    width:80%;
+}
+caption { font-weight: bold; font-size:18px;}
+#info table th {
+     font-weight: bold;
+    background-color:#a59379;
+    padding:10px;
+    /*color:#fff;*/
+}
+#info table td{
+    background-color:#fff;
+    padding:10px;
+}
+
+/*********************/
+/* スタッフ紹介 */
+/*********************/
+#staff {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.staff-wrap {display:table; width:100%;}
+.staff-in {
+  display:table-cell;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.staff-image {
+    width:90%;
+}
+.staff-intro {
+    width:90%;
+}
+.staff-image img{
+    width:50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+.staff-nm-j {
+    font-weight: bold;
+    font-size:20px;
+}

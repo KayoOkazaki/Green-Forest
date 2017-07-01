@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Berkshire+Swash|Merienda+One|Norican|Pacifico");
+/****************************/
+/* first 初めての方へ */
+/***************************/
+/* Green Forestとは */
+#aboutus {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+}
+
+#aboutus article {
+  margin-top: 20px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+#aboutus .wrapper img {
+  width: 150px;
+}
+
+#case {
+  text-indent: 30px;
+  list-style: none;
+}
+
+#case li:before {
+  font-family: FontAwesome;
+  content: '\f086';
+  /* アイコンのunicode */
+}
