@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Merienda+One|Norican|Pacifico');
-
+@import "variables"; //定数外部ファイル
 /****************************/
 /* first 初めての方へ */
 /***************************/
@@ -9,7 +9,6 @@
   width:80%;
   margin-left: auto;
   margin-right: auto;
-  font-weight: 700;
 }
 #aboutus article{
     margin-top: 20px;
@@ -27,4 +26,54 @@
 #case li:before {
   font-family: FontAwesome;
   content: '\f086'; /* アイコンのunicode */
+}
+/****************************/
+/* 施術料金 */
+/***************************/
+#price {
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#price table{
+  width:70%;
+  #h {width:30%;}
+  margin-left: auto;
+  margin-right: auto;
+}
+#price table th {
+  background-color:$accent_color1;
+}
+/****************************/
+/* よくある質問 */
+/***************************/
+#QandA-1 {
+  width: 100%;
+  font-family: メイリオ;
+  font-size: 14px; /*全体のフォントサイズ*/
+}
+#QandA-1 dt {
+  background: #B0FFA9; /* 「Q」タイトルの背景色 */
+  font-weight:bold;
+  // color: orange; /* 「Q」タイトルの文字色 */
+  padding: 8px;
+  border-radius: 25px;
+}
+#QandA-1 dt:before {
+  content: "Q.";
+  font-weight: bold;
+  margin-right: 8px;
+}
+#QandA-1 dd {
+  margin: 24px 16px 40px 32px;
+  line-height: 140%;
+  text-indent: -24px;
+}
+#QandA-1 dd:before {
+  content: "A.";
+  font-weight: bold;
+  margin-right: 8px;
+}
+#QandA-1 .strong {
+  font-weight:bold;
 }

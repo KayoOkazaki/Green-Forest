@@ -12,7 +12,7 @@
 #news ul li {
   margin-top: 20px;
   padding: 0 10px 10px 160px;
-  border-bottom: 1px dotted #552707;
+  border-bottom: 1px dotted #453319;
   text-indent: -160px;
   list-style-type: none;
 }
@@ -74,7 +74,7 @@
   top: 30px;
   left: 45px;
   width: 145px;
-  color: #552707;
+  color: #453319;
   font-size: 18px;
   font-weight: bold;
   text-shadow: 1px 2px 3px #808080;
@@ -89,6 +89,8 @@
 .cap h3 {
   color: white;
   font-size: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 .cap p {
@@ -214,10 +216,10 @@ caption {
 }
 
 #info table th {
-  font-weight: bold;
-  background-color: #a59379;
+  background-color: #453319;
   padding: 10px;
-  /*color:#fff;*/
+  color: #fff;
+  border-color: #fff;
 }
 
 #info table td {
@@ -232,6 +234,10 @@ caption {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+#staff h3 {
+  margin: 5px;
 }
 
 .staff-wrap {

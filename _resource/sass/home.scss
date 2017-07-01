@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+@import "variables"; //定数外部ファイル
 /*********************/
 /* News 一覧 */
 /*********************/
@@ -12,7 +12,7 @@
 #news ul li{
   margin-top: 20px;
   padding: 0 10px 10px 160px;
-  border-bottom: 1px dotted #552707;
+  border-bottom: 1px dotted $tableHead_color;
   text-indent: -160px;
   list-style-type: none;
 }
@@ -68,7 +68,7 @@
  top: 30px;
  left: 45px;
  width: 145px;
- color:#552707;
+ color:$tableHead_color;
  font-size:18px;
  font-weight: bold;
  text-shadow: 1px 2px 3px #808080;
@@ -80,6 +80,8 @@
 .cap h3 {
     color:white;
     font-size: 20px;
+    padding:0;
+    margin:0;
 }
 .cap p {
     color:white;
@@ -173,10 +175,11 @@
 }
 caption { font-weight: bold; font-size:18px;}
 #info table th {
-     font-weight: bold;
-    background-color:#a59379;
+     // font-weight: bold;
+    background-color:$tableHead_color;
     padding:10px;
-    /*color:#fff;*/
+    color:#fff;
+    border-color: #fff;
 }
 #info table td{
     background-color:#fff;
@@ -190,6 +193,9 @@ caption { font-weight: bold; font-size:18px;}
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+#staff h3 {
+  margin:5px;
 }
 
 .staff-wrap {display:table; width:100%;}

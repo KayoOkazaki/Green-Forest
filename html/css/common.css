@@ -38,7 +38,7 @@ table {
 
 table th, table td {
   padding: 15px;
-  border: 1px solid #552707;
+  border: 1px solid #453319;
 }
 
 table caption {
@@ -48,6 +48,10 @@ table caption {
 
 table caption p {
   margin-bottom: 30px;
+}
+
+figcaption {
+  font-weight: bold;
 }
 
 .mainimg {
@@ -93,14 +97,12 @@ table caption p {
   border-radius: 6px;
   color: #fff;
   background-color: #1c4467;
-  border-color: #2e6da4;
   text-decoration: none;
 }
 
 .buttn:hover {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: #3B709F;
 }
 
 /****************************************************
@@ -112,7 +114,6 @@ header {
 
 #globalNavi {
   width: 100%;
-  background: #333;
 }
 
 #globalNavi ul li a {
@@ -139,9 +140,15 @@ header {
   z-index: 10000;
 }
 
+#breadcrumb {
+  clear: both;
+  padding: 10px;
+}
+
 #breadcrumb ul {
+  clear: both;
   list-style-type: none;
-  padding: 0;
+  padding: 10px;
 }
 
 #breadcrumb ul li {
@@ -154,6 +161,12 @@ header {
   background-image: url(../images/breadcrumb_arrow.png);
   background-repeat: no-repeat;
   background-position: right center;
+}
+
+#breadcrumb ul:first-child:before {
+  font-family: FontAwesome;
+  content: '\f015';
+  /* homeアイコンのunicode */
 }
 
 /****************************************************
@@ -170,14 +183,14 @@ header {
 }
 
 #move-page-top {
-  color: #777777;
+  color: #555555;
   text-decoration: none;
   display: block;
   cursor: pointer;
 }
 
 #move-page-top:hover {
-  color: #555555;
+  color: #777777;
 }
 
 /****************************************************
@@ -228,7 +241,7 @@ h3 {
   font-size: 18px;
   border-bottom: solid 3px skyblue;
   position: relative;
-  margin: 30px 0 10px 0;
+  margin: 50px 0 20px 0;
 }
 
 h3:after {

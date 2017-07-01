@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "variables"; //定数外部ファイル
 // /****************************************************
 // /*  CSSリセット
 // *****************************************************/
@@ -6,7 +7,7 @@
 html,body{
   height: 100%;
   margin: 0;
-  background-color: #dafed7;
+  background-color: $back_color;
 }
 strong {font-weight: bold;}
 body {
@@ -14,7 +15,7 @@ body {
   font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 87.5%;
   line-height: 1.5;
-  color:#505050;
+  color:$char_color;
 }
 
 p {
@@ -33,7 +34,7 @@ table {
 }
 table th, table td {
   padding: 15px;
-  border: 1px solid #552707;
+  border: 1px solid $tableHead_color;
 }
 table caption {
   overflow: hidden;
@@ -41,6 +42,9 @@ table caption {
 }
 table caption p {
   margin-bottom: 30px;
+}
+figcaption {
+  font-weight:bold;
 }
 
 // /*************************************************************
@@ -89,14 +93,12 @@ table caption p {
   line-height: 1.3333333;
   border-radius: 6px;
   color: #fff;
-  background-color: #1c4467;
-  border-color: #2e6da4;
+  background-color: $btn1_color;
   text-decoration :none;
 }
 .buttn:hover {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: $btn1Hover_color;
 }
 /****************************************************
 /*  グローバルナビ　デザイン
@@ -106,10 +108,9 @@ header{
 }
 #globalNavi{
     width: 100%;
-    background:#333;
 }
 #globalNavi ul li a{
-    background:#453319;
+    background:$glNav_color;
     width: 20%;
     float: left;
     padding:20px 0;
@@ -120,7 +121,7 @@ header{
     box-sizing: border-box;
 }
 #globalNavi ul li a:hover{
-    background:#2f7f26;
+    background:$glNavHover_color;
     transition: 0.6s;
 }
 .fixed {
@@ -132,9 +133,14 @@ header{
 //*************************************************************
 // パン屑リスト　デザイン
 //*************************************************************
+#breadcrumb {
+  clear:both;
+  padding: 10px;
+}
 #breadcrumb ul {
+  clear:both;
   list-style-type: none;
-  padding: 0;
+  padding: 10px;
 }
 #breadcrumb ul li {
   display: inline;
@@ -146,7 +152,10 @@ header{
   background-repeat: no-repeat;
   background-position: right center;
 }
-
+#breadcrumb ul:first-child:before {
+  font-family: FontAwesome;
+  content: '\f015'; /* homeアイコンのunicode */
+}
 /****************************************************
 /*  ページトップアイコン　デザイン
 *****************************************************/
@@ -160,13 +169,13 @@ header{
   text-align: center;
 }
 #move-page-top {
-  color: #777777;
+  color: $pageTopIco_color;
   text-decoration: none;
   display: block;
   cursor: pointer;
 }
 #move-page-top:hover {
-  color: #555555;
+  color: $pageTopIcoHover_color;
 }
 /****************************************************
 /*  メインコンテンツ　デザイン
@@ -199,32 +208,34 @@ h2::after {
 }
 h2::before {
     top: 0;
-    border-top: 2px solid #1c4467;
-    border-bottom: 1px solid #1c4467;
+    border-top: 2px solid $h2title_color;
+    border-bottom: 1px solid $h2title_color;
 }
 h2::after {
   bottom: 0;
-  border-top: 1px solid #1c4467;
-  border-bottom: 2px solid #1c4467;
+  border-top: 1px solid $h2title_color;
+  border-bottom: 2px solid $h2title_color;
 }
 
 h3 {
   font-weight: bold;
   font-size: 18px;
-  border-bottom: solid 3px skyblue;
+  border-bottom: solid 3px $h3title_color2;
   position: relative;
-  margin:30px 0 10px 0;
+  margin:50px 0 20px 0;
 }
 
 h3:after {
   position: absolute;
   content: " ";
   display: block;
-  border-bottom: solid 3px #ffc778;
+  border-bottom: solid 3px $h3title_color1;
   bottom: -3px;
   width: 30%;
 }
+h4 {
 
+}
 
 p {
   font-weight: normal;
@@ -236,7 +247,7 @@ footer{
     margin-top: 110px;
     padding:20px;
     text-align: center;
-    background-color: #453319;
+    background-color: $footer_color;
     color:#fff;
 }
 #sns {

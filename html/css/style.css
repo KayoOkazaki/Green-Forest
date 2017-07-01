@@ -8,7 +8,6 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  font-weight: 700;
 }
 
 #aboutus article {
@@ -32,4 +31,67 @@
   font-family: FontAwesome;
   content: '\f086';
   /* アイコンのunicode */
+}
+
+/****************************/
+/* 施術料金 */
+/***************************/
+#price {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#price table {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#price table #h {
+  width: 30%;
+}
+
+#price table th {
+  background-color: #B0FFA9;
+}
+
+/****************************/
+/* よくある質問 */
+/***************************/
+#QandA-1 {
+  width: 100%;
+  font-family: メイリオ;
+  font-size: 14px;
+  /*全体のフォントサイズ*/
+}
+
+#QandA-1 dt {
+  background: #B0FFA9;
+  /* 「Q」タイトルの背景色 */
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 25px;
+}
+
+#QandA-1 dt:before {
+  content: "Q.";
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+#QandA-1 dd {
+  margin: 24px 16px 40px 32px;
+  line-height: 140%;
+  text-indent: -24px;
+}
+
+#QandA-1 dd:before {
+  content: "A.";
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+#QandA-1 .strong {
+  font-weight: bold;
 }
