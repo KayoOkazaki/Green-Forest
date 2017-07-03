@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    #nav {
+      overflow: hidden;
+      width: 565px;
+      margin: 0 auto;
+  }
+  #nav li {
+      float: left;
+  }
+  #nav li a {
+      font-size: 14px;
+      display: block;
+      width: 108px;
+      height: 40px;
+      margin: 1px 0 0 1px;
+      padding: 1px 2px;
+      line-height: 2.8;
+      color: #fff;
+      background: #9fb7d4;
+      text-align: center;
+  }
+  #nav li a:hover {
+      background: #afc6e2;
+  }
+  #nav li ul {
+      width: 113px;
+      display: none;
+      position: absolute;
+  }
+  #nav li ul li {
+      float: none;
+  }
+  #nav li ul li a {
+      background: #9fb7d4;
+  }
+  .content {
+      width: 545px;
+      height: 200px;
+      margin: 0 auto;
+      padding: 10px;
+  }
+</style>
+<body>
+    <ul id="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Strategy</a>
+            <ul>
+                <li><a href="#">b</a></li>
+                <li><a href="#">b</a></li>
+            </ul>
+        </li>
+        <li><a href="#">About</a>
+            <ul>
+                <li><a href="#">c</a></li>
+                <li><a href="#">c</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Works</a>
+            <ul>
+                <li><a href="#">d</a></li>
+                <li><a href="#">d</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+        <!--nav--></ul>
+        <div class="content">
+            <p>横並びドロップダウンメニューのサンプルです。メニュー部分にマウスオーバーするとコンテンツの上に子メニューが展開します。</p>
+        </div>
+        <script>
+            $(function() {
+                var nav = $('#nav');
+                var navTop = nav.offset().top;
+                $('li', nav).hover(function(){
+                    $('ul',this).stop().slideDown('fast');
+                },
+                function(){
+                    $('ul',this).stop().slideUp('fast');
+                });
+            });
+        </script>
+        </html>

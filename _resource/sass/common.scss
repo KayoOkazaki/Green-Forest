@@ -107,33 +107,90 @@ figcaption {
 header{
     margin-bottom:10px;
 }
-#globalNavi{
-    width: 100%;
+#globalNavi {
+  width: 100%;
 }
-#globalNavi ul li a{
-    background:$glNav_color;
-    width: 20%;
-    float: left;
-    padding:20px 0;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    border-right: 1px solid #fff;
-    box-sizing: border-box;
+
+#globalNavi ul li a {
+  background: #453319;
+  width: 20%;
+  float: left;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  border-right: 1px solid #fff;
+  box-sizing: border-box;
 }
-#globalNavi ul li a:hover{
-    background:$glNavHover_color;
-    transition: 0.6s;
+
+#globalNavi ul li a:hover {
+  background: #2f7f26;
+  transition: 0.6s;
 }
+
 .fixed {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
 }
+
+#breadcrumb {
+  clear: both;
+  padding: 10px;
+}
+
+#breadcrumb ul {
+  clear: both;
+  list-style-type: none;
+  padding: 10px;
+}
+
+#breadcrumb ul li {
+  display: inline;
+  margin-right: 5px;
+}
+
+#breadcrumb ul li a {
+  padding-right: 15px;
+  background-image: url(../images/breadcrumb_arrow.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+// ドロップダウンダウンメニュー
+#first {
+    position:absolute;
+}
+#ddwn-menu {
+  width: 100%;
+  /*通常表示ではドロップダウンメニューを非表示*/
+  display: none;
+  /*親要素のbodyに固定表示*/
+  position: relative;
+  top:58%;
+  left:80%;
+}
+#ddwn-menu li a{
+  clear: both;
+}
+#ddwn-menu li ul li a {
+  background: #9fb7d4;
+}
+#ddwn a:hover {
+    background-color: red;
+}
+
+// 現在ページをアクティブ表示
+#globalNavi .nav .active{background:$glNavHover_color;}
+
 //*************************************************************
 // パン屑リスト　デザイン
 //*************************************************************
+#breadcrumb ul:first-child:before {
+  font-family: FontAwesome;
+  content: '\f015'; /* homeアイコンのunicode */
+}
 #breadcrumb {
   clear:both;
   padding: 10px;

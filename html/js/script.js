@@ -25,20 +25,40 @@ $(window).scroll(function(){
 $("#move-page-top").click(function(){
      $("html,body").animate({scrollTop: 0}, 350);
 });
-//----------------------------------------------------------------------------
-// リンクをクリックした時、ヘッダの高さ分ページTOPの位置をずらして移動する。（ページ内リンクの飛び先位置ズレを解消）
-//----------------------------------------------------------------------------
-// $(function () {
-//  var headerHight = 570; //ヘッダの高さ
-//  $('a').click(function(){
-//      var href= $(this).attr("href");
-//        var target = $(href == "#" || href == "" ? 'html' : href);
-//         var position = target.offset().top　-　headerHight; //ヘッダの高さ分位置をずらす
-//         alert('position:' + position);
-//      $("html, body").animate({scrollTop:position}, 550, "swing");
-//         return false;
-//    });
-// });
+//----------------------------------------------------------
+// 現在のページのナビボタンをActive表示にする
+//----------------------------------------------------------
+$(function () {
+     var url = window.location.pathname;
+     // alert('url:' + url);
+        $('.nav a[href*="'+url+'"]').addClass('active');
+ });
+//----------------------------------------------------------
+// navアコーディオンメニュー：ホバーで開閉させる
+//----------------------------------------------------------
+    // $(function() {
+    //     var nav = $('.nav');
+    //     var navTop = nav.offset().top;
+    //     $('li', nav).hover(function(){
+    //         $('ul',this).stop().slideDown('fast');
+    //     },
+    //     function(){
+    //         $('ul',this).stop().slideUp('fast');
+    //     });
+    // });
+    $(function() {
+        var nav = $('#ddwn');
+        var navTop = nav.offset().top;
+        $('a', nav).hover(function(){
+            // alert('hover' + nav);
+            // $('ul',this).stop().slideDown('fast');
+            $('#ddwn-menu').css('display','block');
+        },
+        function(){
+            // $('ul',this).stop().slideUp('fast');
+            $('#ddwn-menu').css('display','none');
+        });
+    });
 //-------------------------------------------------------------------
 // 機能説明 ： スクロールイベント用jQueryプラグインを使用した表示エフェクト
 //
