@@ -173,3 +173,28 @@
   padding: 0 10px;
   border-radius: 25px;
 }
+
+/****************************/
+/* contact お問合せ・予約 */
+/***************************/
+#contact #mailform {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact #mailform ul {
+  list-style-type: square;
+}
+
+#contact #mailform ul li {
+  margin-left: 30px;
+}
+
+#contact #mailform strong {
+  color: red;
+}
+
+#contact #mailform table tr:last-child {
+  text-align: center;
+}

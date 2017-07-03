@@ -36,26 +36,13 @@ $(function () {
 //----------------------------------------------------------
 // navアコーディオンメニュー：ホバーで開閉させる
 //----------------------------------------------------------
-    // $(function() {
-    //     var nav = $('.nav');
-    //     var navTop = nav.offset().top;
-    //     $('li', nav).hover(function(){
-    //         $('ul',this).stop().slideDown('fast');
-    //     },
-    //     function(){
-    //         $('ul',this).stop().slideUp('fast');
-    //     });
-    // });
     $(function() {
         var nav = $('#ddwn');
         var navTop = nav.offset().top;
         $('a', nav).hover(function(){
-            // alert('hover' + nav);
-            // $('ul',this).stop().slideDown('fast');
             $('#ddwn-menu').css('display','block');
         },
         function(){
-            // $('ul',this).stop().slideUp('fast');
             $('#ddwn-menu').css('display','none');
         });
     });
