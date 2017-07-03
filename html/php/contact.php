@@ -1,3 +1,107 @@
+<?php
+require_once 'util.inc.php';
+
+// クリックジャッキング対策
+header("X-FRAME-OPTIONS: SAMEORIGIN");
+
+// セッション開始
+session_start();
+
+// 変数初期化
+$errMsg = array();
+$name = "";
+$kana = "";
+$telno = "";
+$mail = "";
+$mailcnf = "";
+$ymd = "";
+$hm = "";
+$number = "";
+$message = "";
+
+
+// 確認画面で修正ボタンがクリックされた時
+if (isset($_SESSION["contact"])) {
+
+	$contact = $_SESSION["contact"];
+
+	$name = $contact["name"];
+	$kana = $contact["kana"];
+	$mail = $contact["mail"];
+	$mailcnf = $contact["mailcnf"];
+	$telno = $contact["telno"];
+	$message= $contact["message"];
+
+}
+// ポスト送信の時
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+	// 入力値を取得
+	$name = $_POST["name"];
+	$kana = $_POST["kana"];
+	$telno = $_POST["telno"];
+	$mail = $_POST["mail"];
+	$mailcnf = $_POST["mailcnf"];
+	$message = $_POST["message"];
+	$token= $_POST["token"];
+
+	// バリデーションチェック
+	if (trim($name=="")) {
+		$errMsg["name"] = "名前を入力してください";
+	}
+	if (trim($kana=="")) {
+		$errMsg[] = "フリガナを入力してください";
+	} elseif (!preg_match("/^[ァ-ヶー 　]+$/u", $kana)) {
+		$errMsg[] = "フリガナの形式が正しくありません";
+
+	}
+	if (trim($telno=="")) {
+		$errMsg[] = "電話番号を入力してください";
+
+	} elseif (!preg_match("/^0\d{9,10}$/", $telno)) {
+		$errMsg[] = "電話番号の形式が正しくありません";
+
+	}
+	if (trim($mail=="")) {
+		$errMsg[] = "メールアドレスを入力してください";
+
+	} elseif (!preg_match("/^[^@]+@[^@]+\.[^@]+$/", $mail)) {
+		$errMsg[] = "メールアドレスの形式が正しくありません";
+
+	}
+	if (trim($mailcnf=="")) {
+		$errMsg[] = "確認用メールアドレスを入力してください";
+
+	} elseif (trim($mailcnf) != trim($mail)) {
+		$errMsg[] = "ご入力頂いたメールアドレスと一致しません";
+
+	}
+
+	// バリデーションチェックOKの時
+	if (count($errMsg) == 0) {
+
+		//入力値を一旦連想配列として保存
+		$contact = array(
+				"name" => $name,
+				"kana" => $kana,
+				"telno" => $telno,
+				"mail" => $mail,
+				"mailcnf" => $mailcnf,
+				"message" => $message,
+				"token" => $token
+		);
+
+		// 連想配列（入力値）ごとセッション変数に保存
+		$_SESSION["contact"] = $contact;
+
+		// 確認画面へ遷移
+		header("Location: contact_conf.php");
+		exit();
+		$errMsg[]="確認画面へ遷移";
+	}
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -6,9 +110,8 @@
     <meta name="keywords" content="Forest Green,癒し,ヒーリング,リラクゼーション,整体,マッサージ,西新宿,大久保,カードリーディング,フラワーエッセンス">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Top | Forest Green</title>
+    <title>Contact | Forest Green</title>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="css/bootstrap-responsive.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.inview.js"></script>
@@ -63,21 +166,33 @@
                         <li>※本メール送信のみでご予約は確定しておりません。<br></li>
                         <li>折り返し予約可能日時をメールまたはお電話にてご連絡いたします。</li>
                     </ul>
-                    <form action="#">
+	               <?php
+	                    // エラーが在る時
+	                if(count($errMsg) >0) {
+	                    	// エラーメッセージを表示する
+	                    	foreach($errMsg as $value) {
+	                    		echo "<span style='color:red;'>" . $value .$token. "</span><br>" . "\n";
+	                    	}
+	                    }
+	                ?>
+				    <!-- フォーム画面 -->
+	                <form action="" method="post" novalidate>
+						<!-- 隠し項目：token -->
+		            	<input type="hidden" name ="token" value="<?php echo getToken(); ?>"/>
                         <table>
-                            <tr><th>お名前：</th>
-                                <td><input type="text" name="name" placeholder="（必須）"></td></tr>
-                            <tr><th>フリガナ：</th>
-                                <td><input type="text" name="kana" placeholder="（必須）"></td></tr>
-                            <tr><th>電話番号：</th>
-                                <td><input type="tel" name="telno" placeholder="（必須）"></td></tr>
-                            <tr><th>E-mail：</th>
-                                <td><input type="email" name="mail" placeholder="（必須）"></td></tr>
-                            <tr><th>E-mail(確認用)：</th>
-                                <td><input type="email" name="mailcnf" placeholder="（必須）"></td></tr>
+	                        <tr><th>お名前：</th>
+	                            <td><input type="text" name="name" placeholder="（必須）" value="<?php echo h($name); ?>"></td></tr>
+	                        <tr><th>フリガナ：</th>
+	                            <td><input type="text" name="kana" placeholder="（必須）" value="<?php echo h($kana); ?>"></td></tr>
+	                        <tr><th>電話番号：</th>
+	                            <td><input type="tel" name="telno" placeholder="（必須）" value="<?php echo h($telno); ?>"></td></tr>
+	                        <tr><th>E-mail：</th>
+	                            <td><input type="email" name="mail" placeholder="（必須）" value="<?php echo h($mail); ?>"></td></tr>
+	                        <tr><th>E-mail(確認用)：</th>
+                            <td><input type="email" name="mailcnf" placeholder="（必須）" value="<?php echo h($mailcnf); ?>"></td></tr>
                             <tr><th>お問合せ:</th>
-                                <td><textarea name="message" rows="10" cols="40" placeholder="(必須)"></textarea></td></tr>
-                            <tr><td colspan="2" id="aaa"><input type="submit" value="送信確認"></td></tr>
+	                            <td><textarea name="message" rows="10" cols="40" placeholder=""><?php echo h($message); ?></textarea></td></tr>
+                            <tr><td colspan="2"><input type="submit" value="送信確認"></td></tr>
                         </table>
                     </form>
                 </section>

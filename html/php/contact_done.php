@@ -6,9 +6,8 @@
     <meta name="keywords" content="Forest Green,癒し,ヒーリング,リラクゼーション,整体,マッサージ,西新宿,大久保,カードリーディング,フラワーエッセンス">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Top | Forest Green</title>
+    <title>Contact done | Forest Green</title>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="css/bootstrap-responsive.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.inview.js"></script>
@@ -44,7 +43,9 @@
         <div id="breadcrumb">
             <ul>
                 <li><a href="index.html">ホーム</a></li>
-                <li>お問合せ・予約</li>
+                <li><a href="contact.php">お問合せ・予約</a></li>
+                <li><a href="contact_conf.php">送信確認</a></li>
+                <li>送信完了</li>
             </ul>
         </div>
     </header>
@@ -56,30 +57,14 @@
        <div id="contentsInner">
             <div id="main">
                 <section id="mailform">
-                    <h2>contact お問合せ・予約</h2>
-                    <p>ご予約に関する以下注意事項をご確認のうえ必要事項をご記入いただき、送信確認ボタンをクリックしてください。</p><br>
-                    <ul style="list-style-type:square">
-                        <li>ご予約の場合は、お問合せ欄に<strong>ご希望日時を第3希望</strong>までご記入ください。<br></li>
-                        <li>※本メール送信のみでご予約は確定しておりません。<br></li>
-                        <li>折り返し予約可能日時をメールまたはお電話にてご連絡いたします。</li>
-                    </ul>
-                    <form action="#">
-                        <table>
-                            <tr><th>お名前：</th>
-                                <td><input type="text" name="name" placeholder="（必須）"></td></tr>
-                            <tr><th>フリガナ：</th>
-                                <td><input type="text" name="kana" placeholder="（必須）"></td></tr>
-                            <tr><th>電話番号：</th>
-                                <td><input type="tel" name="telno" placeholder="（必須）"></td></tr>
-                            <tr><th>E-mail：</th>
-                                <td><input type="email" name="mail" placeholder="（必須）"></td></tr>
-                            <tr><th>E-mail(確認用)：</th>
-                                <td><input type="email" name="mailcnf" placeholder="（必須）"></td></tr>
-                            <tr><th>お問合せ:</th>
-                                <td><textarea name="message" rows="10" cols="40" placeholder="(必須)"></textarea></td></tr>
-                            <tr><td colspan="2" id="aaa"><input type="submit" value="送信確認"></td></tr>
-                        </table>
-                    </form>
+                    <h2>送信完了</h2>
+                    <h3>ご予約ありがとうございました。</h3>
+                    <p>ご予約頂きました内容でお席確保が可能かどうか確認をいたします。<br>
+                       もしご希望に添えない場合は折り返し担当者よりご連絡差し上げます。<br><br>
+                       またメールアドレスに不備がございますと確認メールが届かない場合がございます。<br>
+                       その際はお手数ではございますが、<b>03-1234-5678</b>までお電話にてご連絡ください。
+                    </p>
+                    <p><a href="index.html">トップページへ戻る</a></p>
                 </section>
             </div>
         </div>

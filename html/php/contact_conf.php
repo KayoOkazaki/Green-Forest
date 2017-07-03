@@ -1,3 +1,119 @@
+<?php
+require_once 'util.inc.php';
+require_once 'libs/qd/qdmail.php';
+require_once 'libs/qd/qdsmtp.php';
+session_start();
+
+// もしセッション変数が登録されていれば値を引き出す。
+if (isset($_SESSION["contact"])) {
+
+		$contact = $_SESSION["contact"];
+
+		$name = $contact["name"];
+		$kana = $contact["kana"];
+		$mail = $contact["mail"];
+		$mailcnf = $contact["mailcnf"];
+		$telno = $contact["telno"];
+		$message = $contact["message"];
+		$token = $contact["token"];
+
+		// IDが違う場合
+		if ($token !== getToken()) {
+
+			  //入力フォーム画面に戻す
+			  header("Location:contact.php");
+			  exit;
+		}
+
+// セッション変数が取得できなかった時
+} else {
+
+	 	// 不正なアクセスとして入力画面に戻す
+	  header("Location:contact.php");
+	  exit;
+}
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+	//送信ボタンクリック時
+	if (isset($_POST["send"])) {
+
+// メール本文作成
+$body=<<<EOT
+■お名前
+{$name}
+
+■フリガナ
+{$kana}
+
+■メールアドレス
+{$mail}
+
+■電話番号
+{$telno}
+
+■問い合わせ内容
+{$message}
+
+EOT;
+
+
+	  	// SMTPの設定
+		$param = array(
+			"host" => "w1.sim.zdrv.com",
+			"port" => 25,
+			"from" => "zd2B03@sim.zdrv.com",
+			"protocol" => "SMTP"
+
+		);
+
+		// メールの送信
+		$mail = new Qdmail();
+
+		//エラーを非表示
+		$mail->errorDisplay(FALSE);
+		$mail->smtpObject()->error_display = FALSE;
+
+		//送信内容
+		$mail->from("zd2B03@sim.zdrv.com", "Green Forest Web");//サーバー上のメールアドレス
+		$mail->to("zd2B03@sim.zdrv.com","Green Forest 管理者（岡崎カヨ）");
+		$mail->subject("Green Forest Web予約フォームからの送信");
+		$mail->text($body);
+		$mail->smtp(TRUE);
+		$mail->smtpServer($param);
+
+		//送信
+		$flag = TRUE;
+
+		//もし送信に成功したならば
+		if (($flag === FALSE) || ($flag === TRUE)){
+
+		  // セッション変数を破棄
+		  unset($_SESSION["contact"]);
+
+		  // 完了画面へ遷移
+		  header("Location:contact_done.php");
+		  exit;
+
+		} else {
+
+		// エラー画面へ遷移
+	  	header("Location:contact_error.php");
+	  	exit;
+  		}
+
+	}
+
+	//修正ボタンクリック時
+	if (isset($_POST["back"])) {
+
+		// 入力画面へ遷移
+		header("Location:contact.php");
+		exit;
+	}
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -6,9 +122,8 @@
     <meta name="keywords" content="Forest Green,癒し,ヒーリング,リラクゼーション,整体,マッサージ,西新宿,大久保,カードリーディング,フラワーエッセンス">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Top | Forest Green</title>
+    <title>Contact confirm | Forest Green</title>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="css/bootstrap-responsive.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.inview.js"></script>
@@ -44,7 +159,8 @@
         <div id="breadcrumb">
             <ul>
                 <li><a href="index.html">ホーム</a></li>
-                <li>お問合せ・予約</li>
+                <li><a href="contact.php">お問合せ・予約</a></li>
+                <li>送信確認</li>
             </ul>
         </div>
     </header>
@@ -57,29 +173,25 @@
             <div id="main">
                 <section id="mailform">
                     <h2>contact お問合せ・予約</h2>
-                    <p>ご予約に関する以下注意事項をご確認のうえ必要事項をご記入いただき、送信確認ボタンをクリックしてください。</p><br>
-                    <ul style="list-style-type:square">
-                        <li>ご予約の場合は、お問合せ欄に<strong>ご希望日時を第3希望</strong>までご記入ください。<br></li>
-                        <li>※本メール送信のみでご予約は確定しておりません。<br></li>
-                        <li>折り返し予約可能日時をメールまたはお電話にてご連絡いたします。</li>
-                    </ul>
-                    <form action="#">
-                        <table>
-                            <tr><th>お名前：</th>
-                                <td><input type="text" name="name" placeholder="（必須）"></td></tr>
-                            <tr><th>フリガナ：</th>
-                                <td><input type="text" name="kana" placeholder="（必須）"></td></tr>
-                            <tr><th>電話番号：</th>
-                                <td><input type="tel" name="telno" placeholder="（必須）"></td></tr>
-                            <tr><th>E-mail：</th>
-                                <td><input type="email" name="mail" placeholder="（必須）"></td></tr>
-                            <tr><th>E-mail(確認用)：</th>
-                                <td><input type="email" name="mailcnf" placeholder="（必須）"></td></tr>
-                            <tr><th>お問合せ:</th>
-                                <td><textarea name="message" rows="10" cols="40" placeholder="(必須)"></textarea></td></tr>
-                            <tr><td colspan="2" id="aaa"><input type="submit" value="送信確認"></td></tr>
-                        </table>
-                    </form>
+                    <!-- フォーム画面 -->
+	                <form action="" method="post">
+	                    <table>
+	                        <tr><th>お名前：</th>
+	                            <td><?php echo $name; ?></td></tr>
+	                        <tr><th>フリガナ：</th>
+	                            <td><?php echo $kana; ?></td></tr>
+	                        <tr><th>電話番号：</th>
+	                            <td><?php echo $telno; ?></td></tr>
+	                        <tr><th>E-mail：</th>
+	                            <td><?php echo $mail; ?></td></tr>
+	                        <tr><th>お問合せ:</th>
+	                            <td><?php echo nl2br($message); ?></td></tr>
+	                        <tr><td colspan="2">
+	                            <input type="submit" name="send" value="送信する">
+	                            <input type="submit" name="back" value="修正する">
+	                        </td></tr>
+	                    </table>
+	                </form>
                 </section>
             </div>
         </div>
