@@ -1,0 +1,409 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Berkshire+Swash|Merienda+One|Norican|Pacifico");
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #dafed7;
+}
+
+strong {
+  font-weight: bold;
+}
+
+body {
+  padding: 0;
+  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 87.5%;
+  line-height: 1.5;
+  color: #505050;
+}
+
+p {
+  margin: 5px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  border: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #453319;
+}
+
+table caption {
+  overflow: hidden;
+  text-align: left;
+}
+
+table caption p {
+  margin-bottom: 30px;
+}
+
+figcaption {
+  font-weight: bold;
+}
+
+.mainimg {
+  background: url(../images/common/mainimg1800_rgba30.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  padding: 10%;
+}
+
+.intro_a {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  height: 185px;
+  color: #453319;
+  margin-bottom: 15px;
+  font-size: 48px;
+  font-weight: 200;
+  font-family: 'Pacifico', cursive;
+  font-family: 'Berkshire Swash', cursive;
+  font-family: 'Norican', cursive;
+  font-family: 'Merienda One', cursive;
+}
+
+.intro_a h1 {
+  margin-bottom: 15px;
+  font-size: 70px;
+  font-weight: 200;
+}
+
+.intro_a p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.buttn {
+  padding: 7px 13px;
+  font-size: 11px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #1c4467;
+  text-decoration: none;
+}
+
+.buttn:hover {
+  color: #fff;
+  background-color: #3B709F;
+}
+
+/****************************************************
+/*  グローバルナビ　デザイン
+*****************************************************/
+header {
+  margin-bottom: 10px;
+}
+
+#globalNavi {
+  width: 100%;
+}
+
+#globalNavi ul li a {
+  background: #453319;
+  width: 20%;
+  float: left;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  border-right: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+#globalNavi ul li a:hover {
+  background: #2f7f26;
+  transition: 0.6s;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
+#breadcrumb {
+  clear: both;
+  padding: 10px;
+}
+
+#breadcrumb ul {
+  clear: both;
+  list-style-type: none;
+  padding: 10px;
+}
+
+#breadcrumb ul li {
+  display: inline;
+  margin-right: 5px;
+}
+
+#breadcrumb ul li a {
+  padding-right: 15px;
+  background-image: url(../images/breadcrumb_arrow.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+#first {
+  position: absolute;
+}
+
+#ddwn-menu {
+  width: 100%;
+  /*通常表示ではドロップダウンメニューを非表示*/
+  display: none;
+  /*親要素のbodyに固定表示*/
+  position: relative;
+  top: 58%;
+  left: 80%;
+}
+
+#ddwn-menu li a {
+  clear: both;
+}
+
+#ddwn-menu li ul li a {
+  background: #9fb7d4;
+}
+
+#ddwn a:hover {
+  background-color: red;
+}
+
+#globalNavi .nav .active {
+  background: #2f7f26;
+}
+
+#breadcrumb ul:first-child:before {
+  font-family: FontAwesome;
+  content: '\f015';
+  /* homeアイコンのunicode */
+}
+
+#breadcrumb {
+  clear: both;
+  padding: 10px;
+}
+
+#breadcrumb ul {
+  clear: both;
+  list-style-type: none;
+  padding: 10px;
+}
+
+#breadcrumb ul li {
+  display: inline;
+  margin-right: 5px;
+}
+
+#breadcrumb ul li a {
+  padding-right: 15px;
+  background-image: url(../images/breadcrumb_arrow.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+#breadcrumb ul:first-child:before {
+  font-family: FontAwesome;
+  content: '\f015';
+  /* homeアイコンのunicode */
+}
+
+/****************************************************
+/*  ページトップアイコン　デザイン
+*****************************************************/
+#page-top {
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#move-page-top {
+  color: #555555;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+#move-page-top:hover {
+  color: #777777;
+}
+
+/****************************************************
+/*  メインコンテンツ　デザイン
+*****************************************************/
+section {
+  margin-bottom: 50px;
+}
+
+/*********************/
+/*ｈ2　タイトルデザイン*/
+/*********************/
+h2 {
+  position: relative;
+  padding: 1em 0;
+  text-align: center;
+  clear: both;
+  font-size: 20px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+h2::before,
+h2::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 6px;
+  box-sizing: border-box;
+}
+
+h2::before {
+  top: 0;
+  border-top: 2px solid #1c4467;
+  border-bottom: 1px solid #1c4467;
+}
+
+h2::after {
+  bottom: 0;
+  border-top: 1px solid #1c4467;
+  border-bottom: 2px solid #1c4467;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: solid 3px skyblue;
+  position: relative;
+  margin: 50px 0 20px 0;
+}
+
+h3:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #ffc778;
+  bottom: -3px;
+  width: 30%;
+}
+
+p {
+  font-weight: normal;
+}
+
+/*********************/
+/* フッター */
+/*********************/
+footer {
+  margin-top: 110px;
+  padding: 20px;
+  text-align: center;
+  background-color: #453319;
+  color: #fff;
+}
+
+footer #foot {
+  margin-top: 10px;
+}
+
+footer #foot p {
+  margin: 0;
+}
+
+#sns {
+  width: 50%;
+}
+
+.flat_ss {
+  color: #484848;
+  display: inline-block;
+  height: 50px;
+  height: 30px;
+  font-size: 25px;
+  line-height: 50px;
+  line-height: 30px;
+  vertical-align: middle;
+  background: #FFEB9E;
+  text-decoration: none;
+  margin: 16px;
+  margin: 10px;
+  border-radius: 15px;
+  /*追記*/
+}
+
+.flat_ss .iconback {
+  display: inline-block;
+  width: 50px;
+  width: 30px;
+  height: 50px;
+  height: 30px;
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+  /*追記*/
+}
+
+.flat_ss .iconback .fa {
+  font-size: 25px;
+  font-size: 18px;
+  line-height: 50px;
+  line-height: 30px;
+}
+
+.flat_ss .iconback .fa {
+  transition: .3s;
+}
+
+.flat_ss .btnttl {
+  display: inline-block;
+  width: 120px;
+  width: 82px;
+  font-size: 18px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.flat_ss .tw {
+  background: #1da1f3;
+}
+
+.flat_ss .fb {
+  background: #3b75d4;
+}
+
+.flat_ss .fdly {
+  background: #7ece46;
+}
+
+.flat_ss .pkt {
+  background: #fd7171;
+}
+
+.flat_ss:hover .iconback .fa {
+  transform: rotateX(360deg);
+}

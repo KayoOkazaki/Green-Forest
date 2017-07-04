@@ -1,0 +1,200 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Berkshire+Swash|Merienda+One|Norican|Pacifico");
+/****************************/
+/* first 初めての方へ */
+/***************************/
+/* Green Forestとは */
+#aboutus {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#aboutus article {
+  margin-top: 20px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+#aboutus .wrapper img {
+  width: 170px;
+}
+
+#case {
+  text-indent: 30px;
+  list-style: none;
+}
+
+#case li:before {
+  font-family: FontAwesome;
+  content: '\f086';
+  /* アイコンのunicode */
+}
+
+/****************************/
+/* 施術料金 */
+/***************************/
+#price {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#price table {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#price table #h {
+  width: 30%;
+}
+
+#price table th {
+  background-color: #B0FFA9;
+  background-color: #b7ffb7;
+}
+
+#price table td {
+  background-color: #fff;
+}
+
+/****************************/
+/* よくある質問 */
+/***************************/
+#QandA-1 {
+  width: 100%;
+  font-family: メイリオ;
+  font-size: 14px;
+  /*全体のフォントサイズ*/
+}
+
+#QandA-1 dt {
+  background: #B0FFA9;
+  /* 「Q」タイトルの背景色 */
+  background: #b7ffb7;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 25px;
+}
+
+#QandA-1 dt:before {
+  content: "Q.";
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+#QandA-1 dd {
+  margin: 24px 16px 40px 32px;
+  line-height: 140%;
+  text-indent: -24px;
+}
+
+#QandA-1 dd:before {
+  content: "A.";
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+#QandA-1 .strong {
+  font-weight: bold;
+}
+
+/****************************/
+/* trouble トラブルの原因 */
+/***************************/
+#trouble {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#trouble article {
+  margin-top: 20px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+#trouble .wrapper img {
+  width: 170px;
+}
+
+/****************************/
+/* blog ブログ */
+/***************************/
+#blog {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#blog article {
+  margin-top: 20px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+#blog .wrapper img {
+  width: 170px;
+}
+
+/****************************/
+/* News 新着情報 */
+/***************************/
+#body_news #news {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#body_news #news article {
+  margin-top: 20px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+#body_news #news .wrapper img {
+  width: 170px;
+}
+
+#body_news #news .date {
+  width: 20%;
+  background: #cccccc;
+  /* 背景色 */
+  font-weight: bold;
+  padding: 0 10px;
+  border-radius: 25px;
+}
+
+/****************************/
+/* contact お問合せ・予約 */
+/***************************/
+#contact #mailform {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact #mailform ul {
+  list-style-type: square;
+}
+
+#contact #mailform ul li {
+  margin-left: 30px;
+}
+
+#contact #mailform strong {
+  color: red;
+}
+
+#contact #mailform table tr:last-child {
+  text-align: center;
+}
