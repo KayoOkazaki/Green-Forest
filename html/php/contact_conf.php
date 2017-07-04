@@ -126,12 +126,12 @@ EOT;
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link rel="stylesheet" href="css/bootstrap-responsive.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.inview.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <link rel="stylesheet" href="css/jq.css">
+    <script type="text/javascript" src="../js/jquery.inview.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/jq.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css" media="screen and (max-width: 480px)"> -->
     <link rel="icon" type="image/ico" href="images/favicon.png">
 </head>
@@ -149,16 +149,16 @@ EOT;
         </div>
         <div id="globalNavi">
             <ul class="nav">
-                <li><a href="/first.html">初めての方へ</a></li>
-                <li><a href="/menu.html">施術料金</a></li>
-                <li><a href="/faq.html">よくある質問</a></li>
-                <li><a href="/contact.html">お問合せ</a></li>
-                <li><a href="/blog.html">ブログ</a></li>
+                <li><a href="../first.html">初めての方へ</a></li>
+                <li><a href="../menu.html">施術料金</a></li>
+                <li><a href="../faq.html">よくある質問</a></li>
+                <li><a href="../contact.html">お問合せ</a></li>
+                <li><a href="../news.html">ブログ</a></li>
             </ul>
         </div>
         <div id="breadcrumb">
             <ul>
-                <li><a href="index.html">ホーム</a></li>
+                <li><a href="../index.html">ホーム</a></li>
                 <li><a href="contact.php">お問合せ・予約</a></li>
                 <li>送信確認</li>
             </ul>
