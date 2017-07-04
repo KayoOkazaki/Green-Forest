@@ -9,17 +9,17 @@
     <title>Top | Forest Green</title>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="../css/bootstrap-responsive.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.inview.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <link rel="stylesheet" href="css/jq.css">
+    <script type="text/javascript" src="../js/jquery.inview.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/jq.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="../css/common.css">
     <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="../css/home.css">
     <!-- <link rel="stylesheet" href="css/responsive.css" media="screen and (max-width: 480px)"> -->
-    <link rel="icon" type="image/ico" href="images/favicon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.png">
 </head>
 <body id="top">
     <header>
@@ -35,11 +35,11 @@
         </div>
         <div id="globalNavi">
             <ul class="nav">
-                <li><a href="first.html">初めての方へ</a></li>
-                <li><a href="menu.html">施術料金</a></li>
-                <li><a href="faq.html">よくある質問</a></li>
-                <li><a href="php/contact.php">お問合せ</a></li>
-                <li><a href="news.html">ブログ</a></li>
+                <li><a href="first.php">初めての方へ</a></li>
+                <li><a href="menu.php">施術料金</a></li>
+                <li><a href="faq.php">よくある質問</a></li>
+                <li><a href="contact.php">お問合せ</a></li>
+                <li><a href="news.php">ブログ</a></li>
             </ul>
         </div>
         <div id="breadcrumb">
@@ -79,7 +79,7 @@
                         <li class="list-mv05">
                             <div class="cap">
                                 <figure>
-                                    <a href="trouble.html#trouble01"><img src="images/trouble01-320x180.jpg" />
+                                    <a href="trouble.html#trouble01"><img src="../images/trouble01-320x180.jpg" />
                                     <span>脚のむくみ</span>
                                     <figcaption>
                                         <h3>脚のむくみの原因</h3>
@@ -93,7 +93,7 @@
                         <li class="list-mv05">
                             <div class="cap">
                                 <figure>
-                                    <a href="trouble.html#trouble02"><img src="images/trouble02-320x213.jpg" />
+                                    <a href="trouble.html#trouble02"><img src="../images/trouble02-320x213.jpg" />
                                         <span>首の痛み</span>
                                         <figcaption>
                                             <h3>首の痛みの原因</h3>
@@ -107,7 +107,7 @@
                         <li class="list-mv05">
                             <div class="cap">
                                 <figure>
-                                    <a href="trouble.html#trouble03"><img src="images/trouble03-320x213.jpg" />
+                                    <a href="trouble.html#trouble03"><img src="../images/trouble03-320x213.jpg" />
                                     <span>肩こり</span>
                                     <figcaption>
                                         <h3>肩がこる原因</h3>
@@ -121,7 +121,7 @@
                         <li class="list-mv05">
                             <div class="cap">
                                 <figure>
-                                    <a href="trouble.html#trouble04"><img src="images/trouble04-320x214.jpg" />
+                                    <a href="trouble.html#trouble04"><img src="../images/trouble04-320x214.jpg" />
                                     <span>心の風邪</span>
                                     <figcaption>
                                         <h3>心の悩みについて</h3>
@@ -140,7 +140,7 @@
                     <div class="voice-wrap">
                         <div class="voice-in">
                           <figure>
-                           <img src="images/icon_woman06.png" alt="">
+                           <img src="../images/icon_woman06.png" alt="">
                             <figcaption>
                                 <h3>20代 女性 事務職</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,ncididunt ut labore et dolore magna aliqua. <br>
@@ -150,7 +150,7 @@
                         </div>
                         <div class="voice-in">
                           <figure>
-                           <img src="images/icon_man01.png" alt="">
+                           <img src="../images/icon_man01.png" alt="">
                             <figcaption>
                                 <h3>20代 男性 営業</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,ncididunt ut labore et dolore magna aliqua. <br>
@@ -160,7 +160,7 @@
                         </div>
                         <div class="voice-in">
                           <figure>
-                           <img src="images/youngwoman_45.png" alt="">
+                           <img src="../images/youngwoman_45.png" alt="">
                             <figcaption>
                                 <h3>30代 女性 ネイリスト</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,ncididunt ut labore et dolore magna aliqua. <br>
@@ -193,7 +193,7 @@
                         <div class="staff-wrap">
                             <div class="staff-in">
                                 <div class="staff-image">
-                                    <img src="images/staff01.jpg" alt="スタッフ紹介">
+                                    <img src="../images/staff01.jpg" alt="スタッフ紹介">
                                 </div>
                                 <div class="staff-intro">
                                     <h3 class="staff-nm-j">&nbsp;<br>小野澄江</h3>
@@ -225,7 +225,7 @@
                            </div>
                            <div class="staff-in">
                                <div class="staff-image">
-                                    <img src="images/staff02.jpg" alt="スタッフ紹介">
+                                    <img src="../images/staff02.jpg" alt="スタッフ紹介">
                                 </div>
                                 <div class="staff-intro">
                                     <h3 class="staff-nm-j">&nbsp;<br>小林よしこ</h3>

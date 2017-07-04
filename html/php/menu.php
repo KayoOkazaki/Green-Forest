@@ -6,28 +6,29 @@
     <meta name="keywords" content="Forest Green,癒し,ヒーリング,リラクゼーション,整体,マッサージ,西新宿,大久保,カードリーディング,フラワーエッセンス">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Contact error | Forest Green</title>
+    <title>施術料金 | Forest Green</title>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <!-- <link rel="stylesheet" href="../css/bootstrap.css"> -->
+    <link rel="stylesheet" href="../css/bootstrap-responsive.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/jquery.inview.js"></script>
-    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="js/jquery.inview.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     <link rel="stylesheet" href="../css/jq.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/style.css">
-    <!-- <link rel="stylesheet" href="css/responsive.css" media="screen and (max-width: 480px)"> -->
-    <link rel="icon" type="image/ico" href="images/favicon.png">
+    <!-- <link rel="stylesheet" href="../css/responsive.css" media="screen and (max-width: 480px)"> -->
+    <link rel="icon" type="image/ico" href="../images/favicon.png">
 </head>
-<body>
-    <header id="top">
+<body id="menu">
+    <header>
         <div class="mainimg">
             <div class="intro_a">
               <h1>Green Forest</h1>
               <p>Welcome to Green Forest!<br>
                  A relaxing paradise for your body and mind.<br><br>
                  TEL: 080-1234-5678<br><br>
-                <a class="buttn" href="#"><span>ご予約はこちら</span></a>
+                <a class="buttn" href="contact.php"><span>ご予約はこちら</span></a>
               </p>
             </div>
         </div>
@@ -37,30 +38,53 @@
                 <li><a href="menu.php">施術料金</a></li>
                 <li><a href="faq.php">よくある質問</a></li>
                 <li><a href="contact.php">お問合せ</a></li>
-                <li><a href="news.phpl">ブログ</a></li>
+                <li><a href="blog.php">ブログ</a></li>
             </ul>
         </div>
         <div id="breadcrumb">
             <ul>
-                <li><a href="../index.phpl">ホーム</a></li>
-                <li><a href="contact.php">お問合せ・予約</a></li>
-                <li><a href="contact_conf.php">送信確認</a></li>
-                <li>送信エラー</li>
+                <li><a href="index.php">ホーム</a></li>
+                <li>施術料金</li>
             </ul>
         </div>
     </header>
-    <div id="contact">
+    <!-- <div style="height:0px; clear:both;"></div> -->
+    <div id="contents">
        <!-- 戻るボタン -->
        <div id="page-top">
             <a id="move-page-top" href="#top"><i class="fa fa-chevron-circle-up fa-5x"></i></a>
        </div>
        <div id="contentsInner">
             <div id="main">
-                <section id="mailform">
-                    <h2>送信エラー</h2>
-                    <h3>大変申し訳ございません。内部エラーが発生しました。</h3>
-                    <p>お手数ですが、時間をおいて再度お試しいただくか、<b>03-3760-0447</b>までお電話いただけますようお願い申し上げます。</p>
-                    <p><a href="index.php">トップページへ戻る</a></p>
+                <section id="price">
+                    <h2>Menu&ensp;施術料金</h2>
+                    <table><caption><h3>整体メニュー</h3></caption>
+                        <tr><th>部位</th><th>時間</th><th>料金</th></tr>
+                        <tr><th id="h">上半身（首・肩・背中）</th><td>60分</td><td>4,000円</td></tr>
+                        <tr><th>下半身（腰・脚・足裏）</th><td>60分</td><td>4,000円</td></tr>
+                        <tr><th rowspan="2">全身（上半身・下半身）</th><td>60分</td><td>4,000円</td></tr>
+                        <tr><td>90分</td><td>6,000円</td></tr>
+                        <tr><th>延長</th><td>30分</td><td>2,000円</td></tr>
+                    </table>
+                    <table><caption><h3>レイキ・ヒーリング（整体をお受けの方のみ）</h3></caption>
+                        <tr><th id="h">時間</th><th>料金</th></tr>
+                        <tr><th>60分</th><td>1,000円</td></tr>
+                        <tr><th>90分</th><td>1,500円</td></tr>
+                        <tr><th>延長30分</th><td>500円</td></tr>
+                    </table>
+                    <table><caption><h3>フラワーエッセンス（整体をお受けの方のみ）</h3></caption>
+                        <tr><th>内容</th><th>料金</th></tr>
+                        <tr><th id="h">カウンセリング+調合</th><td>1,500円</td></tr>
+                        <tr><th>調合（+ボトル代）</th><td>700円</td></tr>
+                        <tr><th>調合のみ（ボトルお持込）</th><td>500円</td></tr>
+                    </table>
+                    <table><caption><h3>レイキ・アチューメント伝授　ただいま準備中！</h3></caption>
+                        <tr><th>コース</th><th>時間</th><th>料金</th></tr>
+                        <tr><th id="h">ファーストディグリー</th><td>準備中</td><td>準備中</td></tr>
+                        <tr><th>セカンドディグリー</th><td>準備中</td><td>準備中</td></tr>
+                        <tr><th>サードディグリー</th><td>準備中</td><td>準備中</td></tr>
+                        <tr><th>ティーチャーズ<br>ディグリー</th><td>準備中</td><td>準備中</td></tr>
+                    </table>
                 </section>
             </div>
         </div>

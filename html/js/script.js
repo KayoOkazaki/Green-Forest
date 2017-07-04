@@ -39,11 +39,21 @@ $(function () {
     $(function() {
         var nav = $('#ddwn');
         var navTop = nav.offset().top;
-        $('a', nav).hover(function(){
-            $('#ddwn-menu').css('display','block');
+        $(nav).hover(function(){
+//            $('#ddwn-menu').css('display','none');
+
+//            $(body).height($(body).height() - $('#ddwn-menu').height());
+//        	var diff = $('body').height() - $('#ddwn-menu').height();
+//        	$('body').height(diff);
+//            alert('(#ddwn-menu).height():' + $('#ddwn-menu').height() + ' (body).height():' + $('body').height());
+//            alert('(#ddwn-menu).height()からマイナス:' + diff);
+            $('#ddwn-menu').slideDown("fast");
         },
         function(){
-            $('#ddwn-menu').css('display','none');
+//            $('#ddwn-menu').css('display','none');
+//        	var diff = $('body').height() + $('#ddwn-menu').height();
+//        	$('body').height(diff);
+            $('#ddwn-menu').slideUp("fast");
         });
     });
 //-------------------------------------------------------------------

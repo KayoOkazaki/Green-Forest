@@ -133,7 +133,7 @@ EOT;
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css" media="screen and (max-width: 480px)"> -->
-    <link rel="icon" type="image/ico" href="images/favicon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.png">
 </head>
 <body>
     <header id="top">
@@ -149,16 +149,16 @@ EOT;
         </div>
         <div id="globalNavi">
             <ul class="nav">
-                <li><a href="../first.html">初めての方へ</a></li>
-                <li><a href="../menu.html">施術料金</a></li>
-                <li><a href="../faq.html">よくある質問</a></li>
-                <li><a href="../contact.html">お問合せ</a></li>
-                <li><a href="../news.html">ブログ</a></li>
+                <li><a href="first.php">初めての方へ</a></li>
+                <li><a href="menu.php">施術料金</a></li>
+                <li><a href="faq.php">よくある質問</a></li>
+                <li><a href="contact.php">お問合せ</a></li>
+                <li><a href="news.php">ブログ</a></li>
             </ul>
         </div>
         <div id="breadcrumb">
             <ul>
-                <li><a href="../index.html">ホーム</a></li>
+                <li><a href="index.php">ホーム</a></li>
                 <li><a href="contact.php">お問合せ・予約</a></li>
                 <li>送信確認</li>
             </ul>

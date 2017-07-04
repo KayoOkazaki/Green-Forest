@@ -76,6 +76,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 		$errMsg[] = "ご入力頂いたメールアドレスと一致しません";
 
 	}
+	if (trim($message=="")) {
+		$errMsg[] = "お問い合わせ内容を入力してください";
+
+	}
 
 	// バリデーションチェックOKの時
 	if (count($errMsg) == 0) {
@@ -162,7 +166,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <h2>contact お問合せ・予約</h2>
                     <p>ご予約に関する以下注意事項をご確認のうえ必要事項をご記入いただき、送信確認ボタンをクリックしてください。</p><br>
                     <ul style="list-style-type:square">
-                        <li>ご予約の場合は、お問合せ欄に<strong>ご希望日時を第3希望</strong>までご記入ください。<br></li>
+                        <li>ご予約の場合は、お問合せ欄に施術内容と時間、<strong>ご希望日時を第3希望</strong>までご記入ください。<br></li>
                         <li>※本メール送信のみでご予約は確定しておりません。<br></li>
                         <li>折り返し予約可能日時をメールまたはお電話にてご連絡いたします。</li>
                     </ul>
@@ -171,7 +175,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	                if(count($errMsg) >0) {
 	                    	// エラーメッセージを表示する
 	                    	foreach($errMsg as $value) {
-	                    		echo "<span style='color:red;'>" . $value .$token. "</span><br>" . "\n";
+	                    		echo "<span style='color:red;'>" . $value . "</span><br>" . "\n";
 	                    	}
 	                    }
 	                ?>
@@ -184,8 +188,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	                            <td><input type="text" name="name" placeholder="（必須）" value="<?php echo h($name); ?>"></td></tr>
 	                        <tr><th>フリガナ：</th>
 	                            <td><input type="text" name="kana" placeholder="（必須）" value="<?php echo h($kana); ?>"></td></tr>
-	                        <tr><th>電話番号：</th>
-	                            <td><input type="tel" name="telno" placeholder="（必須）" value="<?php echo h($telno); ?>"></td></tr>
+	                        <tr><th>電話番号 ハイフンなし:</th>
+	                            <td><input type="tel" name="telno" placeholder="（必須）" value="<?php echo h($telno); ?>"> 例：08012345678</td></tr>
 	                        <tr><th>E-mail：</th>
 	                            <td><input type="email" name="mail" placeholder="（必須）" value="<?php echo h($mail); ?>"></td></tr>
 	                        <tr><th>E-mail(確認用)：</th>
