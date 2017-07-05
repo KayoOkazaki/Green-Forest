@@ -36,26 +36,25 @@ $(function () {
 //----------------------------------------------------------
 // navアコーディオンメニュー：ホバーで開閉させる
 //----------------------------------------------------------
+//$('#ddwn-menu').css('display','none');
     $(function() {
         var nav = $('#ddwn');
-        var navTop = nav.offset().top;
-        $(nav).hover(function(){
-//            $('#ddwn-menu').css('display','none');
 
-//            $(body).height($(body).height() - $('#ddwn-menu').height());
-//        	var diff = $('body').height() - $('#ddwn-menu').height();
-//        	$('body').height(diff);
-//            alert('(#ddwn-menu).height():' + $('#ddwn-menu').height() + ' (body).height():' + $('body').height());
-//            alert('(#ddwn-menu).height()からマイナス:' + diff);
-            $('#ddwn-menu').slideDown("fast");
+        $(nav).hover(function(){
+        	$('#ddwn-menu').slideDown("fast");
         },
         function(){
-//            $('#ddwn-menu').css('display','none');
-//        	var diff = $('body').height() + $('#ddwn-menu').height();
-//        	$('body').height(diff);
             $('#ddwn-menu').slideUp("fast");
         });
     });
+
+ //----------------------------------------------------------
+ // ドロップダウンメニュー：ホバーで開閉させる
+ //----------------------------------------------------------
+$(document).ready(function() {
+    $('.navi').dropdown();
+});
+
 //-------------------------------------------------------------------
 // 機能説明 ： スクロールイベント用jQueryプラグインを使用した表示エフェクト
 //

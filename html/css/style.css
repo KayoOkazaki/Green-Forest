@@ -1,5 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Berkshire+Swash|Merienda+One|Norican|Pacifico");
+
+/****************************/
+/* Word Press */
+/***************************/
+a[title="noevent"] { pointer-events: none; }
+
 /****************************/
 /* first 初めての方へ */
 /***************************/
@@ -147,13 +153,13 @@
 /****************************/
 /* News 新着情報 */
 /***************************/
-#body_news #news {
+#news01 {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 
-#body_news #news article {
+#news01 article {
   margin-top: 20px;
 }
 
@@ -161,11 +167,11 @@
   display: flex;
 }
 
-#body_news #news .wrapper img {
+#news01 .wrapper img {
   width: 170px;
 }
 
-#body_news #news .date {
+#news01 .date {
   width: 20%;
   background: #cccccc;
   /* 背景色 */
